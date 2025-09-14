@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Annasaheb Patil Sevabhavi Sanstha | Vasantrao Kale College Beed</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="../assets/img/favicon.png" rel="icon">
+  <link href="../assets/img/favicon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="../assets/css/main.css" rel="stylesheet">
+
+  <!-- Custom BCA Course Structure Styles -->
+  <style>
+    /* BCA Course Structure Section */
+    .bca-course-structure-section {
+      position: relative;
+      min-height: 100vh;
+      padding: 100px 0;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      background-attachment: fixed;
+      overflow: hidden;
+    }
+
+    .bca-course-structure-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+      opacity: 0.3;
+    }
+
+    .background-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 1;
+    }
+
+    .bca-course-structure-section .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Section Header */
+    .section-header .section-title {
+      font-family: 'Poppins', sans-serif;
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: #ffffff;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    .section-header .section-subtitle {
+      font-family: 'Roboto', sans-serif;
+      font-size: 1.3rem;
+      color: rgba(255, 255, 255, 0.9);
+      font-weight: 300;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Glassmorphism Cards */
+    .course-card {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 20px;
+      padding: 0;
+      overflow: hidden;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+      height: 100%;
+      position: relative;
+    }
+
+    .course-card:hover {
+      transform: translateY(-15px) scale(1.02);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      border-color: rgba(255, 255, 255, 0.4);
+    }
+
+    .course-card.featured {
+      background: rgba(255, 255, 255, 0.25);
+      border: 2px solid rgba(255, 215, 0, 0.5);
+      transform: scale(1.05);
+    }
+
+    .course-card.featured:hover {
+      transform: translateY(-15px) scale(1.07);
+      box-shadow: 0 25px 70px rgba(255, 215, 0, 0.2);
+    }
+
+    /* Card Header */
+    .course-card .card-header {
+      padding: 2rem 2rem 1rem;
+      text-align: center;
+      position: relative;
+    }
+
+    .year-badge {
+      display: inline-block;
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+      border-radius: 50%;
+      color: white;
+      font-size: 1.5rem;
+      font-weight: 700;
+      line-height: 60px;
+      margin-bottom: 1rem;
+      box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+      transition: all 0.3s ease;
+    }
+
+    .course-card:hover .year-badge {
+      transform: rotate(360deg) scale(1.1);
+    }
+
+    .year-title {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: #ffffff;
+      margin-bottom: 0.5rem;
+    }
+
+    .year-subtitle {
+      font-family: 'Roboto', sans-serif;
+      font-size: 1rem;
+      color: rgba(255, 255, 255, 0.8);
+      margin-bottom: 0;
+    }
+
+    /* Card Body */
+    .course-card .card-body {
+      padding: 0 2rem 1rem;
+    }
+
+    .subjects-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .subjects-list li {
+      padding: 0.7rem 0;
+      color: rgba(255, 255, 255, 0.9);
+      font-family: 'Roboto', sans-serif;
+      font-size: 0.95rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+    }
+
+    .subjects-list li:last-child {
+      border-bottom: none;
+    }
+
+    .subjects-list li:hover {
+      color: #ffffff;
+      padding-left: 10px;
+    }
+
+    .subjects-list li i {
+      color: #4ecdc4;
+      margin-right: 0.8rem;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    .subjects-list li:hover i {
+      color: #26d0ce;
+      transform: scale(1.2);
+    }
+
+    /* Card Footer */
+    .course-card .card-footer {
+      padding: 1rem 2rem 2rem;
+      text-align: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .semester-info {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.8);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* Additional Info Section */
+    .additional-info {
+      margin-top: 4rem;
+    }
+
+    .info-item {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 15px;
+      padding: 2rem 1rem;
+      transition: all 0.3s ease;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .info-item:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: translateY(-5px);
+    }
+
+    .info-icon {
+      width: 70px;
+      height: 70px;
+      background: linear-gradient(135deg, #4ecdc4, #44a08d);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1rem;
+      transition: all 0.3s ease;
+    }
+
+    .info-icon i {
+      font-size: 2rem;
+      color: white;
+    }
+
+    .info-item:hover .info-icon {
+      transform: scale(1.1) rotate(5deg);
+    }
+
+    .info-item h4 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #ffffff;
+      margin-bottom: 0.5rem;
+    }
+
+    .info-item p {
+      font-family: 'Roboto', sans-serif;
+      color: rgba(255, 255, 255, 0.8);
+      margin-bottom: 0;
+      font-size: 1rem;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .section-header .section-title {
+        font-size: 2.5rem;
+      }
+      
+      .section-header .section-subtitle {
+        font-size: 1.1rem;
+      }
+      
+      .course-card {
+        margin-bottom: 2rem;
+      }
+      
+      .course-card.featured {
+        transform: none;
+      }
+      
+      .year-title {
+        font-size: 1.5rem;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .bca-course-structure-section {
+        padding: 60px 0;
+      }
+      
+      .section-header .section-title {
+        font-size: 2rem;
+      }
+      
+      .course-card .card-header,
+      .course-card .card-body,
+      .course-card .card-footer {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+      }
+    }
+  </style>
+
+  <!-- =======================================================
+  * Template Name: College
+  * Template URL: https://bootstrapmade.com/college-bootstrap-education-template/
+  * Updated: Jun 19 2025 with Bootstrap v5.3.6
+  * Author: BootstrapMade.com
+  ======================================================== -->
+</head>
+
+<body class="students-life-page">
+
+      <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="container-fluid container-xl d-flex justify-content-between align-items-center">
+      <div class="contact-info d-flex align-items-center">
+        <span class="me-3"><i class="bi bi-phone me-2"></i> 02442 220 621</span>
+        <span><i class="bi bi-envelope me-2"></i> info@vkcollegebeed.com</span>
+      </div>
+      <div class="opening-hours">
+        <span><i class="bi bi-clock me-2"></i> Mon-Sat: 10:00 AM - 6:00 PM</span>
+      </div>
+    </div>
+  </div>
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div
+      class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-end">
+
+      <a href="../" class="logo d-flex align-items-center me-auto">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <img src="../assets/img/logo.png" alt="">
+
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+
+          <li><a href="../">Home</a></li>
+
+          <li class="dropdown"><a href="../college-overview/"><span>About</span> <i
+                class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="../apss/">Aannasaheb Patil Sevabhavi Sanstha</a></li>
+              <li><a href="../college-overview/">College Overview</a></li>
+              <li><a href="../vision-mission/">Vision & Mission</a></li>
+              <li><a href="../president-message/">President’s Message</a></li>
+              <li><a href="../principal-message/">Principal’s Message</a></li>
+              <li><a href="../management/">Management</a></li>
+              <li><a href="../organizational-structure/">Organizational Structure</a></li>
+              <li><a href="../mandatory-disclosures/">Mandatory Disclosures</a></li>
+              <li><a href="../affiliations-recognitions/">Affiliations & Recognitions</a></li>
+            </ul>
+          </li>
+
+          <li class="dropdown"><a href="#"><span>Academics</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li class="dropdown"><a href="#"><span>Departments</span> <i
+                    class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="../journalism/">Journalism</a></li>
+                  <li><a href="../computer-science/">Computer Science</a></li>
+                </ul>
+              </li>
+              <li><a href="../academic-calendar/">Academic Calendar</a></li>
+              <li><a href="../timetables/">Timetables</a></li>
+              <li><a href="../syllabus-curriculum/">Syllabus / Curriculum</a></li>
+              <li><a href="../faculty-directory/">Faculty Directory</a></li>
+              <li><a href="../teaching-learning-methods/">Teaching & Learning Methods</a></li>
+              <li><a href="../research-publications/">Research & Publications</a></li>
+            </ul>
+          </li>
+
+          <li class="dropdown"><a href="#"><span>Courses</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li class="dropdown"><a href="#"><span>Undergraduate Programs</span> <i
+                    class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="../bcs/">B.Sc. (Computer Science) – BCS</a></li>
+                  <li><a href="../bca/">B.C.A. (Computer Applications)</a></li>
+                  <li><a href="../ba/">B.A. (Mass Communication & Journalism)</a></li>
+                  <li><a href="../bj/">Bachelor of Journalism</a></li>
+                  <li><a href="../bnm/">B.Sc. (Networking & Multimedia)</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a href="#"><span>Postgraduate Programs</span> <i
+                    class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="../ma/">M.A. (Mass Communication & Journalism)</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <li class="dropdown"><a href="#"><span>NAAC & IQAC</span> <i
+                class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="../naac-overview/">NAAC Overview</a></li>
+              <li><a href="../iqac-cell/">IQAC Cell</a></li>
+              <li><a href="../ssr/">SSR (Self-Study Report)</a></li>
+              <li><a href="../aqar-reports/">AQAR Reports</a></li>
+              <li><a href="../best-practices/">Best Practices</a></li>
+              <li><a href="../institutional-distinctiveness/">Institutional Distinctiveness</a></li>
+              <li><a href="../policy-documents/">Policy Documents</a></li>
+              <li><a href="../feedback/">Feedback</a></li>
+              <li><a href="../atr/">Action Taken Reports</a></li>
+            </ul>
+          </li>
+
+          <li class="dropdown"><a href="#"><span>Student Corner</span> <i
+                class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li class="dropdown"><a href="#"><span>Admission Process</span> <i
+                    class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="../prospectus/">Prospectus</a></li>
+                  <li><a href="../fees-structure/">Fee Structure</a></li>
+                  <li><a href="../eligibility-criteria/">Eligibility Criteria</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a href="#"><span>Scholarships</span> <i
+                    class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="../scst-scholarships/">SC/ST Scholarships</a></li>
+                  <li><a href="../minority-gov-schemes/">Minority / EBC / Government Schemes</a></li>
+                </ul>
+              </li>
+              <li><a href="../notices-downloads/">Notices & Downloads</a></li>
+              <li><a href="../student-achievements/">Student Achievements</a></li>
+              <li><a href="../anti-ragging-cell/">Anti-Ragging Cell</a></li>
+              <li><a href="../icc/">Internal Complaints Committee (ICC)</a></li>
+              <li><a href="../grc/">Grievance Redressal Cell</a></li>
+              <li><a href="../alumni/">Alumni Network</a></li>
+            </ul>
+          </li>
+
+          <li class="dropdown"><a href="#"><span>Facilities</span> <i
+                class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="../campus-infrastructure/">Campus Infrastructure</a></li>
+              <li><a href="../classrooms-halls/">Classrooms & Seminar Halls</a></li>
+              <li><a href="../library/">Library</a></li>
+              <li><a href="../computer-labs/">Computer Labs</a></li>
+              <li><a href="../sports-facilities/">Sports Facilities</a></li>
+              <li><a href="../medical/">Medical / First Aid</a></li>
+              <li><a href="../green-campus/">Green Campus Initiatives</a></li>
+            </ul>
+          </li>
+
+          <li><a href="../contact/">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- BCA Course Structure Section -->
+    <section id="bca-course-structure" class="bca-course-structure-section">
+      <div class="background-overlay"></div>
+      <div class="container" data-aos="fade-up">
+        
+        <!-- Section Title -->
+        <div class="section-header text-center mb-5" data-aos="fade-up" data-aos-delay="100">
+          <h2 class="section-title">Bachelor of Computer Applications (BCA) Course Structure</h2>
+          <p class="section-subtitle">Comprehensive three-year program designed to build strong foundations in computer applications and programming</p>
+        </div>
+
+        <!-- Course Years Cards -->
+        <div class="row g-4 justify-content-center">
+          
+          <!-- First Year Card -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-right" data-aos-delay="200">
+            <div class="course-card glassmorphism-card">
+              <div class="card-header">
+                <div class="year-badge">01</div>
+                <h3 class="year-title">First Year</h3>
+                <p class="year-subtitle">Foundation & Programming Basics</p>
+              </div>
+              <div class="card-body">
+                <ul class="subjects-list">
+                  <li><i class="bi bi-check-circle"></i> Programming Fundamentals (C Programming)</li>
+                  <li><i class="bi bi-check-circle"></i> Computer Fundamentals & Office Automation</li>
+                  <li><i class="bi bi-check-circle"></i> Digital Electronics</li>
+                  <li><i class="bi bi-check-circle"></i> Mathematics for Computer Applications</li>
+                  <li><i class="bi bi-check-circle"></i> Data Structures using C</li>
+                  <li><i class="bi bi-check-circle"></i> Computer Graphics & Multimedia</li>
+                  <li><i class="bi bi-check-circle"></i> English Communication</li>
+                  <li><i class="bi bi-check-circle"></i> Environmental Studies</li>
+                </ul>
+              </div>
+              <div class="card-footer">
+                <span class="semester-info">Semester I & II</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Second Year Card -->
+          <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="400">
+            <div class="course-card glassmorphism-card featured">
+              <div class="card-header">
+                <div class="year-badge">02</div>
+                <h3 class="year-title">Second Year</h3>
+                <p class="year-subtitle">Advanced Programming & Systems</p>
+              </div>
+              <div class="card-body">
+                <ul class="subjects-list">
+                  <li><i class="bi bi-check-circle"></i> Object-Oriented Programming (C++/Java)</li>
+                  <li><i class="bi bi-check-circle"></i> Database Management Systems</li>
+                  <li><i class="bi bi-check-circle"></i> Operating Systems</li>
+                  <li><i class="bi bi-check-circle"></i> Software Engineering</li>
+                  <li><i class="bi bi-check-circle"></i> Computer Networks</li>
+                  <li><i class="bi bi-check-circle"></i> Web Development (HTML, CSS, JavaScript)</li>
+                  <li><i class="bi bi-check-circle"></i> Statistics & Numerical Methods</li>
+                  <li><i class="bi bi-check-circle"></i> System Analysis & Design</li>
+                </ul>
+              </div>
+              <div class="card-footer">
+                <span class="semester-info">Semester III & IV</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Third Year Card -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-left" data-aos-delay="600">
+            <div class="course-card glassmorphism-card">
+              <div class="card-header">
+                <div class="year-badge">03</div>
+                <h3 class="year-title">Third Year</h3>
+                <p class="year-subtitle">Specialization & Project Work</p>
+              </div>
+              <div class="card-body">
+                <ul class="subjects-list">
+                  <li><i class="bi bi-check-circle"></i> Advanced Java Programming</li>
+                  <li><i class="bi bi-check-circle"></i> E-Commerce & Digital Marketing</li>
+                  <li><i class="bi bi-check-circle"></i> Mobile Application Development</li>
+                  <li><i class="bi bi-check-circle"></i> Data Mining & Business Intelligence</li>
+                  <li><i class="bi bi-check-circle"></i> Cyber Security & Ethical Hacking</li>
+                  <li><i class="bi bi-check-circle"></i> Cloud Computing</li>
+                  <li><i class="bi bi-check-circle"></i> Final Year Project</li>
+                  <li><i class="bi bi-check-circle"></i> Industrial Training & Internship</li>
+                </ul>
+              </div>
+              <div class="card-footer">
+                <span class="semester-info">Semester V & VI</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Additional Info Section -->
+        <div class="additional-info text-center mt-5" data-aos="fade-up" data-aos-delay="800">
+          <div class="row g-4">
+            <div class="col-md-3">
+              <div class="info-item">
+                <div class="info-icon">
+                  <i class="bi bi-calendar-check"></i>
+                </div>
+                <h4>3 Years</h4>
+                <p>Duration</p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="info-item">
+                <div class="info-icon">
+                  <i class="bi bi-book"></i>
+                </div>
+                <h4>6 Semesters</h4>
+                <p>Academic Terms</p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="info-item">
+                <div class="info-icon">
+                  <i class="bi bi-award"></i>
+                </div>
+                <h4>UGC Approved</h4>
+                <p>Recognition</p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="info-item">
+                <div class="info-icon">
+                  <i class="bi bi-briefcase"></i>
+                </div>
+                <h4>100%</h4>
+                <p>Placement Support</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="footer" class="footer position-relative light-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <img src="../assets/img/logo.png" alt="">
+          </a>
+
+          <div class="footer-contact pt-3">
+            <p>2nd floor, Aman plaza, Driving School St,</p>
+            <p>near mane petrol pump, Beed, Maharashtra 431122</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
+            <p><strong>Email:</strong> <span>info@vkcollegebeed.com</span></p>
+          </div>
+          <div class="social-links d-flex mt-4">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="../">Home</a></li>
+            <li><a href="../college-overview/">About Us</a></li>
+            <li><a href="../featured-programs/">Programs</a></li>
+            <li><a href="../eligibility-criteria/">Admissions</a></li>
+            <li><a href="../notices-downloads/">Notices & Downloads</a></li>
+            <li><a href="../contact/">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Academics</h4>
+          <ul>
+            <li><a href="../ba/">B.A.(MCJ)</a></li>
+            <li><a href="../bj/">B.J</a></li>
+            <li><a href="../bcs/">B.C.S</a></li>
+            <li><a href="../bca/">B.C.A</a></li>
+            <li><a href="../networking-multimedia/">B.Sc. Networking & Multimedia</a></li>
+            <li><a href="../ma/">M.A.(MCJ)</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Student Resources</h4>
+          <ul>
+            <li><a href="../syllabus-curriculum/">Syllabus & Curriculum</a></li>
+            <li><a href="../timetables/">Timetables</a></li>
+            <li><a href="../fees-structure/">Fees Structure</a></li>
+            <li><a href="../prospectus/">Prospectus</a></li>
+            <li><a href="../academic-calendar/">Academic Calendar</a></li>
+            <li><a href="../library/">Library</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Quality & Compliance</h4>
+          <ul>
+            <li><a href="../iqac-cell/">IQAC Cell</a></li>
+            <li><a href="../naac-overview/">NAAC Overview</a></li>
+            <li><a href="../aqar-reports/">AQAR Reports</a></li>
+            <li><a href="../anti-ragging-cell/">Anti-Ragging Cell</a></li>
+            <li><a href="../icc/">ICC (Internal Complaints Committee)</a></li>
+            <li><a href="../policy-documents/">Policy Documents</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">VK College Beed</strong> <span>All Rights
+          Reserved</span></p>
+      <div class="credits">
+        Developed by <a href="https://metafuturetechnology.com/">Meta Future Technology</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/php-email-form/validate.js"></script>
+  <script src="../assets/vendor/aos/aos.js"></script>
+  <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="../assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="../assets/js/main.js"></script>
+
+</body>
+
+</html>

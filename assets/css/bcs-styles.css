@@ -1,0 +1,685 @@
+/* BCS Page Custom Styles */
+
+/* Page Title Section */
+.page-title {
+  background: linear-gradient(135deg, #04415f 0%, #2086b8 100%);
+  color: white;
+  padding: 120px 0 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-title::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+  opacity: 0.3;
+}
+
+.page-title .heading {
+  position: relative;
+  z-index: 2;
+}
+
+.page-title h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.page-title p {
+  font-size: 1.3rem;
+  opacity: 0.9;
+  font-weight: 300;
+}
+
+.breadcrumbs {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255,255,255,0.2);
+  padding: 20px 0;
+}
+
+.breadcrumbs ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumbs ol li {
+  color: rgba(255,255,255,0.8);
+  font-weight: 500;
+}
+
+.breadcrumbs ol li + li::before {
+  content: '/';
+  margin: 0 15px;
+  color: rgba(255,255,255,0.6);
+}
+
+.breadcrumbs ol li a {
+  color: rgba(255,255,255,0.9);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.breadcrumbs ol li a:hover {
+  color: white;
+}
+
+.breadcrumbs ol li.current {
+  color: white;
+  font-weight: 600;
+}
+
+/* Program Overview Section */
+.program-overview {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #f8fbfc 0%, #ffffff 100%);
+}
+
+.program-overview .content {
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(4, 65, 95, 0.1);
+  height: 100%;
+  border: 1px solid rgba(4, 65, 95, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.program-overview .content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(4, 65, 95, 0.15);
+}
+
+.program-overview h3 {
+  color: #04415f;
+  font-size: 2rem;
+  margin-bottom: 25px;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.program-overview h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #04415f, #2086b8);
+  border-radius: 2px;
+}
+
+.program-overview ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 25px;
+}
+
+.program-overview ul li {
+  padding: 12px 0;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(4, 65, 95, 0.1);
+}
+
+.program-overview ul li:last-child {
+  border-bottom: none;
+}
+
+.program-overview ul li i {
+  color: #2086b8;
+  font-size: 1.2rem;
+  margin-right: 15px;
+  background: rgba(32, 134, 184, 0.1);
+  padding: 8px;
+  border-radius: 50%;
+}
+
+.objectives-list {
+  margin-top: 25px;
+}
+
+.objective-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 25px;
+  padding: 20px;
+  background: rgba(4, 65, 95, 0.02);
+  border-radius: 10px;
+  border-left: 4px solid #2086b8;
+  transition: all 0.3s ease;
+}
+
+.objective-item:hover {
+  background: rgba(4, 65, 95, 0.05);
+  transform: translateX(5px);
+}
+
+.objective-icon {
+  background: linear-gradient(135deg, #04415f, #2086b8);
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+.objective-content h4 {
+  color: #04415f;
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+}
+
+/* Course Structure Section */
+.course-structure {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #e6edf0 0%, #f1f5f7 100%);
+}
+
+.course-structure .section-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.course-structure .section-title h2 {
+  font-size: 2.5rem;
+  color: #04415f;
+  margin-bottom: 15px;
+}
+
+.course-structure .section-title p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.year-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(4, 65, 95, 0.1);
+  transition: all 0.3s ease;
+  height: 100%;
+  border: 1px solid rgba(4, 65, 95, 0.05);
+}
+
+.year-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 50px rgba(4, 65, 95, 0.2);
+}
+
+.year-header {
+  background: linear-gradient(135deg, #04415f 0%, #2086b8 100%);
+  color: white;
+  padding: 30px;
+  text-align: center;
+  position: relative;
+}
+
+.year-header::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 10px solid #04415f;
+}
+
+.year-header h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.year-badge {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 8px 20px;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  backdrop-filter: blur(10px);
+}
+
+.year-content {
+  padding: 40px 30px;
+}
+
+.year-content h4 {
+  color: #04415f;
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  margin-top: 30px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid rgba(32, 134, 184, 0.2);
+}
+
+.year-content h4:first-child {
+  margin-top: 0;
+}
+
+.year-content ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 25px;
+}
+
+.year-content ul li {
+  padding: 10px 0;
+  padding-left: 25px;
+  position: relative;
+  color: #555;
+  transition: color 0.3s ease;
+}
+
+.year-content ul li::before {
+  content: '▶';
+  position: absolute;
+  left: 0;
+  color: #2086b8;
+  font-size: 0.8rem;
+}
+
+.year-content ul li:hover {
+  color: #04415f;
+}
+
+/* Eligibility Section */
+.eligibility {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fbfc 100%);
+}
+
+.eligibility-card, .admission-card {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(4, 65, 95, 0.1);
+  height: 100%;
+  border: 1px solid rgba(4, 65, 95, 0.05);
+  transition: all 0.3s ease;
+}
+
+.eligibility-card:hover, .admission-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 50px rgba(4, 65, 95, 0.15);
+}
+
+.eligibility-card h3, .admission-card h3 {
+  color: #04415f;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  text-align: center;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.eligibility-card h3::after, .admission-card h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #04415f, #2086b8);
+  border-radius: 2px;
+}
+
+.criteria-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 25px;
+  padding: 20px;
+  background: rgba(4, 65, 95, 0.02);
+  border-radius: 12px;
+  border-left: 4px solid #2086b8;
+  transition: all 0.3s ease;
+}
+
+.criteria-item:hover {
+  background: rgba(4, 65, 95, 0.05);
+  transform: translateX(5px);
+}
+
+.criteria-item i {
+  color: #2086b8;
+  font-size: 1.5rem;
+  margin-right: 20px;
+  margin-top: 5px;
+  background: rgba(32, 134, 184, 0.1);
+  padding: 12px;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.criteria-item h4 {
+  color: #04415f;
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+}
+
+.criteria-item p {
+  color: #666;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.admission-steps {
+  margin-top: 30px;
+}
+
+.step {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.step:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: 22px;
+  top: 50px;
+  width: 2px;
+  height: 40px;
+  background: linear-gradient(180deg, #2086b8, rgba(32, 134, 184, 0.3));
+}
+
+.step-number {
+  background: linear-gradient(135deg, #04415f, #2086b8);
+  color: white;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-right: 20px;
+  flex-shrink: 0;
+  box-shadow: 0 5px 15px rgba(4, 65, 95, 0.3);
+}
+
+.step-content h4 {
+  color: #04415f;
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+}
+
+.step-content p {
+  color: #666;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Career Opportunities Section */
+.career-opportunities {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #e6edf0 0%, #f1f5f7 100%);
+}
+
+.career-card {
+  background: white;
+  padding: 35px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 15px 35px rgba(4, 65, 95, 0.1);
+  transition: all 0.3s ease;
+  height: 100%;
+  border: 1px solid rgba(4, 65, 95, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+.career-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #04415f, #2086b8);
+}
+
+.career-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 50px rgba(4, 65, 95, 0.2);
+}
+
+.career-icon {
+  background: linear-gradient(135deg, #04415f, #2086b8);
+  color: white;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 25px;
+  font-size: 2rem;
+  box-shadow: 0 10px 25px rgba(4, 65, 95, 0.3);
+}
+
+.career-card h3 {
+  color: #04415f;
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+}
+
+.career-card ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+.career-card ul li {
+  padding: 8px 0;
+  padding-left: 20px;
+  position: relative;
+  color: #666;
+  transition: color 0.3s ease;
+}
+
+.career-card ul li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #2086b8;
+  font-weight: bold;
+}
+
+.career-card ul li:hover {
+  color: #04415f;
+}
+
+/* Facilities Section */
+.facilities {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fbfc 100%);
+}
+
+.facility-item {
+  display: flex;
+  align-items: flex-start;
+  background: white;
+  padding: 35px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(4, 65, 95, 0.1);
+  margin-bottom: 30px;
+  border: 1px solid rgba(4, 65, 95, 0.05);
+  transition: all 0.3s ease;
+}
+
+.facility-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(4, 65, 95, 0.15);
+}
+
+.facility-icon {
+  background: linear-gradient(135deg, #04415f, #2086b8);
+  color: white;
+  width: 70px;
+  height: 70px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 25px;
+  flex-shrink: 0;
+  font-size: 1.8rem;
+  box-shadow: 0 8px 20px rgba(4, 65, 95, 0.3);
+}
+
+.facility-content h3 {
+  color: #04415f;
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+}
+
+.facility-content p {
+  color: #666;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Call to Action Section */
+.call-to-action {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #04415f 0%, #2086b8 100%);
+  color: white;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.call-to-action::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23dots)"/></svg>');
+}
+
+.call-to-action .container {
+  position: relative;
+  z-index: 2;
+}
+
+.call-to-action h3 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.call-to-action p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  opacity: 0.9;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-btn, .cta-btn-outline {
+  display: inline-block;
+  padding: 15px 35px;
+  margin: 10px;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 1.1rem;
+}
+
+.cta-btn {
+  background: white;
+  color: #04415f;
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
+}
+
+.cta-btn:hover {
+  background: #f8f9fa;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(255, 255, 255, 0.4);
+  color: #04415f;
+}
+
+.cta-btn-outline {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.cta-btn-outline:hover {
+  background: white;
+  color: #04415f;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .page-title h1 {
+    font-size: 2.5rem;
+  }
+  
+  .page-title p {
+    font-size: 1.1rem;
+  }
+  
+  .course-structure .section-title h2 {
+    font-size: 2rem;
+  }
+  
+  .call-to-action h3 {
+    font-size: 2rem;
+  }
+  
+  .call-to-action p {
+    font-size: 1.1rem;
+  }
+  
+  .facility-item {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .facility-icon {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  
+  .criteria-item, .objective-item {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .criteria-item i, .objective-icon {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+}
