@@ -1,0 +1,305 @@
+/*--------------------------------------------------------------
+# Campus Infrastructure Styles
+--------------------------------------------------------------*/
+
+/* Infrastructure Overview Section */
+.infrastructure-overview .stats-item {
+  background: var(--surface-color);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(4, 65, 95, 0.1);
+}
+
+.infrastructure-overview .stats-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.infrastructure-overview .purecounter {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--accent-color);
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* Facilities Gallery Section */
+.facility-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.facility-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.facility-img {
+  position: relative;
+  overflow: hidden;
+  height: 250px;
+}
+
+.facility-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.facility-item:hover .facility-img img {
+  transform: scale(1.1);
+}
+
+.facility-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(4, 65, 95, 0.9));
+  color: white;
+  padding: 20px;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.facility-item:hover .facility-overlay {
+  transform: translateY(0);
+}
+
+.facility-info h4 {
+  color: white;
+  margin-bottom: 8px;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.facility-info p {
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* Detailed Facilities Section */
+.facility-detail {
+  background: var(--surface-color);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border-left: 4px solid var(--accent-color);
+  height: 100%;
+}
+
+.facility-detail:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.facility-detail .icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--accent-color), #2086b8);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.facility-detail h3 {
+  color: var(--heading-color);
+  margin-bottom: 15px;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.facility-detail ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.facility-detail ul li {
+  padding: 8px 0;
+  display: flex;
+  align-items: center;
+  color: var(--default-color);
+}
+
+.facility-detail ul li i {
+  color: var(--accent-color);
+  margin-right: 10px;
+  font-size: 1rem;
+}
+
+/* Amenities Section */
+.amenity-item {
+  background: var(--surface-color);
+  padding: 30px 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.amenity-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.amenity-item .icon {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, var(--accent-color), #2086b8);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  color: white;
+  font-size: 1.8rem;
+}
+
+.amenity-item h4 {
+  color: var(--heading-color);
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.amenity-item p {
+  color: var(--default-color);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* Virtual Tour CTA Section */
+.virtual-tour {
+  background: linear-gradient(135deg, var(--accent-color), #2086b8);
+  color: white;
+  padding: 80px 0;
+}
+
+.virtual-tour h2 {
+  color: white;
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.virtual-tour p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-cta, .btn-cta-outline {
+  padding: 12px 30px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.btn-cta {
+  background: white;
+  color: var(--accent-color);
+  border: 2px solid white;
+}
+
+.btn-cta:hover {
+  background: transparent;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.btn-cta-outline {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.btn-cta-outline:hover {
+  background: white;
+  color: var(--accent-color);
+  transform: translateY(-2px);
+}
+
+/* Section Titles */
+.section-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-title h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--heading-color);
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.section-title h2:after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(135deg, var(--accent-color), #2086b8);
+  border-radius: 2px;
+}
+
+.section-title p {
+  font-size: 1.1rem;
+  color: var(--default-color);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .facility-detail {
+    padding: 25px;
+  }
+  
+  .amenity-item {
+    padding: 25px 15px;
+  }
+  
+  .section-title h2 {
+    font-size: 2rem;
+  }
+  
+  .virtual-tour h2 {
+    font-size: 2rem;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .btn-cta, .btn-cta-outline {
+    width: 200px;
+    text-align: center;
+  }
+}
