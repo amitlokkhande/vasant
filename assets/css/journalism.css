@@ -1,0 +1,488 @@
+/*--------------------------------------------------------------
+# Journalism Department Page Styles V2
+--------------------------------------------------------------*/
+
+/* Color Palette */
+:root {
+  --j-navy: #0A192F;
+  --j-gold: #FFD700;
+  --j-light-gold: #FFFBEA;
+  --j-white: #FFFFFF;
+  --j-light-gray: #f8f9fa;
+  --j-text-primary: #333;
+  --j-text-secondary: #555;
+}
+
+/* General Body Styles for Journalism Page */
+.journalism-page body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--j-text-secondary);
+}
+
+.journalism-page .section-title h2 {
+    color: var(--j-navy);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Hero Section (Page Title) */
+.journalism-page .page-title {
+  background-image: url('../img/departments/journalism-hero-bg.jpg'); /* Make sure this image path is correct */
+  background-size: cover;
+  background-position: center;
+  color: var(--j-white);
+  padding: 120px 0;
+  position: relative;
+  text-align: center;
+}
+
+.journalism-page .page-title:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(10, 25, 47, 0.7);
+  z-index: 1;
+}
+
+.journalism-page .page-title .heading {
+  position: relative;
+  z-index: 2;
+}
+
+.journalism-page .page-title h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--j-white);
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+}
+
+.journalism-page .page-title p {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 600px;
+  margin: 15px auto 25px auto;
+}
+
+.journalism-page .btn-cta {
+  background-color: var(--j-gold);
+  color: var(--j-navy);
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  display: inline-block;
+  border: 2px solid var(--j-gold);
+}
+
+.journalism-page .btn-cta:hover {
+  background-color: transparent;
+  color: var(--j-gold);
+  transform: translateY(-3px);
+}
+
+.journalism-page .breadcrumbs {
+  position: relative;
+  z-index: 2;
+  background: rgba(0,0,0,0.2);
+  padding: 10px 0;
+}
+
+.journalism-page .breadcrumbs ol li a {
+  color: var(--j-gold);
+}
+
+.journalism-page .breadcrumbs ol .current {
+  color: var(--j-white);
+}
+
+/* Department Details Section */
+.journalism-page .department-details {
+  padding: 80px 0;
+}
+
+.journalism-page .department-details .department-content h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--j-navy);
+  margin-bottom: 20px;
+}
+
+.journalism-page .department-details .department-content ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.journalism-page .department-details .department-content ul li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+.journalism-page .department-details .department-content ul i {
+  font-size: 24px;
+  color: var(--j-gold);
+  margin-right: 15px;
+  line-height: 1;
+}
+
+.journalism-page .department-sidebar {
+  padding: 30px;
+  background: var(--j-light-gold);
+  border-radius: 10px;
+  border-left: 4px solid var(--j-gold);
+}
+
+.journalism-page .department-sidebar h4 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--j-navy);
+  margin-bottom: 15px;
+}
+
+/* Programs Section */
+.journalism-page .programs {
+  padding: 80px 0;
+  background-color: var(--j-light-gray);
+}
+
+.journalism-page .programs .program-item {
+  background-color: var(--j-white);
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+  height: 100%;
+  border-bottom: 4px solid transparent;
+}
+
+.journalism-page .programs .program-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+  border-bottom-color: var(--j-gold);
+}
+
+.journalism-page .programs .program-item i {
+  font-size: 48px;
+  color: var(--j-navy);
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.journalism-page .programs .program-item:hover i {
+    color: var(--j-gold);
+}
+
+.journalism-page .programs .program-item h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--j-navy);
+  margin-bottom: 15px;
+}
+
+.journalism-page .programs .program-item p {
+  color: var(--j-text-secondary);
+}
+
+.journalism-page .programs .program-item .btn-get-started {
+  color: var(--j-navy);
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+
+.journalism-page .programs .program-item .btn-get-started:hover {
+  color: var(--j-gold);
+}
+
+/* Faculty Section */
+.journalism-page .faculty {
+  padding: 80px 0;
+}
+
+.journalism-page .faculty .faculty-member {
+  background-color: var(--j-white);
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  overflow: hidden;
+  text-align: center;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.journalism-page .faculty .faculty-member .img-container {
+    overflow: hidden;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin: 20px auto 0;
+    border: 4px solid var(--j-light-gold);
+}
+
+.journalism-page .faculty .faculty-member .img-fluid {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.journalism-page .faculty .faculty-member:hover .img-fluid {
+  transform: scale(1.1);
+}
+
+.journalism-page .faculty .faculty-member .member-info {
+  padding: 20px;
+}
+
+.journalism-page .faculty .faculty-member h4 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--j-navy);
+}
+
+.journalism-page .faculty .faculty-member span {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--j-gold);
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.journalism-page .faculty .faculty-member p {
+  font-size: 0.95rem;
+  color: var(--j-text-secondary);
+}
+
+/* Facilities Section */
+.journalism-page .facilities {
+  padding: 80px 0;
+  background-color: var(--j-light-gray);
+}
+
+.journalism-page .facilities .facility-item {
+  text-align: center;
+  padding: 30px;
+  background: var(--j-white);
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.journalism-page .facilities .facility-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+}
+
+.journalism-page .facilities .facility-item i {
+  font-size: 48px;
+  color: var(--j-gold);
+  margin-bottom: 20px;
+}
+
+.journalism-page .facilities .facility-item h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--j-navy);
+  margin-bottom: 15px;
+}
+
+/* Student Life Section */
+.journalism-page .student-life {
+  padding: 80px 0;
+}
+
+.journalism-page .student-life .student-activity {
+  background: var(--j-white);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.journalism-page .student-life .student-activity:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+}
+
+.journalism-page .student-life .student-activity img {
+  border-bottom: 3px solid var(--j-gold);
+}
+
+.journalism-page .student-life .student-activity h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--j-navy);
+  padding: 20px 20px 10px 20px;
+}
+
+.journalism-page .student-life .student-activity p {
+  padding: 0 20px 20px 20px;
+  color: var(--j-text-secondary);
+}
+
+/* Career Opportunities Section */
+.journalism-page .career-opportunities {
+  padding: 80px 0;
+  background-color: var(--j-light-gray);
+}
+
+.journalism-page .career-opportunities .career-item {
+  text-align: center;
+  padding: 30px;
+  background: var(--j-white);
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.journalism-page .career-opportunities .career-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+}
+
+.journalism-page .career-opportunities .career-item i {
+  font-size: 48px;
+  color: var(--j-gold);
+  margin-bottom: 20px;
+}
+
+.journalism-page .career-opportunities .career-item h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--j-navy);
+}
+
+/* Contact Section */
+.journalism-page .contact {
+  padding: 80px 0;
+}
+
+.journalism-page .contact .info-item {
+  background: var(--j-light-gold);
+  padding: 30px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.journalism-page .contact .info-item i {
+  font-size: 24px;
+  color: var(--j-navy);
+  background: var(--j-gold);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.journalism-page .contact .info-item h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--j-navy);
+  margin-left: 20px;
+}
+
+.journalism-page .contact .info-item p {
+  margin-left: 20px;
+  margin-bottom: 0;
+}
+
+.journalism-page .contact .php-email-form {
+  width: 100%;
+  background: var(--j-white);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.journalism-page .contact .php-email-form .form-control {
+  border-radius: 50px;
+  padding: 12px 20px;
+  border: 1px solid #ddd;
+  transition: all 0.3s ease;
+}
+
+.journalism-page .contact .php-email-form .form-control:focus {
+  border-color: var(--j-gold);
+  box-shadow: 0 0 0 0.25rem rgba(255, 215, 0, 0.25);
+}
+
+.journalism-page .contact .php-email-form textarea.form-control {
+  border-radius: 20px;
+}
+
+.journalism-page .contact .php-email-form button[type="submit"] {
+  background: var(--j-navy);
+  color: var(--j-white);
+  border: 0;
+  padding: 12px 35px;
+  transition: 0.3s;
+  border-radius: 50px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.journalism-page .contact .php-email-form button[type="submit"]:hover {
+  background: var(--j-gold);
+  color: var(--j-navy);
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .journalism-page .page-title h1 {
+    font-size: 2.5rem;
+  }
+
+  .journalism-page .page-title p {
+    font-size: 1rem;
+  }
+
+  .journalism-page .department-details .department-content h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .journalism-page .department-sidebar {
+    margin-top: 30px;
+  }
+
+  .journalism-page .contact .info-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .journalism-page .contact .info-item i {
+    margin-bottom: 15px;
+  }
+
+  .journalism-page .contact .info-item h3,
+  .journalism-page .contact .info-item p {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .journalism-page .page-title h1 {
+    font-size: 2rem;
+  }
+
+  .journalism-page .btn-cta {
+    padding: 10px 25px;
+  }
+}
